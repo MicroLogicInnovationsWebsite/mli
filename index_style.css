@@ -29,8 +29,6 @@ html {
     background: none;
     color: rgb(8, 25, 110);
     font-size: 1.4vw;
-    display: flex;
-    flex-direction: row;
     margin-left: 2vw;
     border: none;
     font-weight: bold;
@@ -43,7 +41,40 @@ html {
 }
 
 video {
-    width: 100%;
+    width: 100vw;
     height: 98vh;
     object-fit: cover;
+}
+#replacementImage{
+    /* display: none; */
+}
+@media only screen and (max-width: 600px) {
+    #nav_buttons {
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin: 0px -3vw;
+    }
+
+    .navigation-button {
+        background: none;
+        color: rgb(8, 25, 110);
+        font-size: 4vw;
+        margin-left: 2vw;
+        margin-bottom: 1vw;
+        border: none;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    video {
+        display: none;
+    }
+
+    #replacementImage {
+        width: 100vw;
+        height: 98vh;
+        object-fit: cover;
+    }
 }
