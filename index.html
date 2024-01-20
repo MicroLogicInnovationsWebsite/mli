@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MICRO LOGIC INNOVATIONS</title>
-    <link rel="stylesheet" href="stylesindex.css">
-    
-    
-    
-    
+    <link rel="stylesheet" href="index_style.css">
+    <script src="script.js"></script>
     <script>
         // JavaScript for mobile redirection
         if (window.innerWidth <= 600) {
@@ -16,23 +14,28 @@
         }
     </script>
 </head>
+
 <body>
-    <video id="MICRO_LOGIC_INNOVATIONS" autoplay muted loop>
-        <source src="vdo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div>
+        <video id="MICRO_LOGIC_INNOVATIONS_VID" autoplay muted loop>
+            <source src="/images/vdo.mp4" type="video/mp4">
+        </video>
+        <!-- Navigation bar -->
+        <div class="nav_bar_container" style="display: flex; flex-direction: row;">
+            <div id="index_button">
+                <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO
+                    LOGIC
+                    INNOVATIONS</button>
+            </div>
+            <div id="nav_buttons">
+                <button id="goToServices" class="navigation-button" onclick="goToServices()">Our Services</button>
+                <button id="goToAboutUs" class="navigation-button" onclick="goToAboutUs()">About Us</button>
+                <button id="goToContactUs" class="navigation-button" onclick="goToContactUs()">Contact Us</button>
+                <button id="goToCareers" class="navigation-button" onclick="goToCareers()">Careers</button>
+            </div>
+        </div>
+    </div>
 
-    <div id="overlay"></div>
-
-    <div id="mobileMenuButton" onclick="toggleMobileMenu()">&#9776;</div>
-
-    <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO LOGIC INNOVATIONS</button>
-    <button id="goToProducts" class="navigation-button" onclick="goToProducts()">Our Products</button>
-    <button id="goToAboutUs" class="navigation-button" onclick="goToAboutUs()">About Us</button>
-    <button id="goToContactUs" class="navigation-button" onclick="goToContactUs()">Contact Us</button>
-    <button id="goToCareers" class="navigation-button" onclick="goToCareers()">Careers</button>
-    <button id="goToScroll" class="navigation-button" onclick="goToScroll()"> </button>
-<!-- &#9660; -->
-    <script src="scriptindex.js"></script>
 </body>
+
 </html>

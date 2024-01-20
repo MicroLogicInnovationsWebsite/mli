@@ -1,0 +1,71 @@
+.Data_Monitoring {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1vw;
+}
+
+.data_monit_right {
+    width: 50vw;
+    height: 58vh;
+    background-color: #f5f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data_monit_left {
+    width: 50vw;
+    height: 40vh;
+    background-color: #c75252;
+}
+
+.img_data_monitoring {
+    width: 50vw;
+    height: 58vh;
+}
+
+.Parameter_Control {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vw;
+}
+
+.param_ctrl_right {
+    width: 50vw;
+    height: 60vh;
+    background-color: #f5f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.param_ctrl_left {
+    width: 50vw;
+    height: 40vh;
+    background-color: #c75252;
+}
+
+#param_left_img{
+    height: 60vh;
+    width: 50vw;
+}
+
+.parameter_para {
+    margin: 0vw 2vw;
+}
+
+/* CUSTOMIZED SOLUTION */
+.custom_sol_heading {
+    text-align: center;
+}
+
+.img_custom_soltion {
+    margin: 0vw 2vw;
+    width: 96vw;
+    height: 99vh;
+}
+
+.custom_solution_para {
+    margin: 0vw 2vw;
+    text-align: left;
+}
