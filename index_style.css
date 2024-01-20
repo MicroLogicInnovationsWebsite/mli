@@ -16,6 +16,7 @@ html {
 
 #goToIndex {
     font-size: 3vw;
+    color: white;
 }
 
 #nav_buttons {
@@ -27,7 +28,7 @@ html {
 .navigation-button {
     /* background-color: transparents; */
     background: none;
-    color: rgb(8, 25, 110);
+    color: #000067;
     font-size: 1.4vw;
     margin-left: 2vw;
     border: none;
@@ -75,6 +76,6 @@ video {
     #replacementImage {
         width: 100vw;
         height: 98vh;
-        object-fit: cover;
+        object-fit: fill;
     }
 }

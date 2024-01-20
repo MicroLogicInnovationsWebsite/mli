@@ -10,6 +10,7 @@
 }
 #goToIndex {
     font-size: 3vw;
+    color: #000067;
 }
 #nav_buttons {
     display: flex;
@@ -20,7 +21,7 @@
 .navigation-button {
     /* background-color: transparents; */
     background: none;
-    color: rgb(8, 4, 4);
+    color: rgb(13, 30, 128);
     font-size: 1.4vw;
     display: flex;
     flex-direction: row;
