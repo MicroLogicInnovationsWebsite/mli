@@ -46,9 +46,7 @@ video {
     height: 98vh;
     object-fit: cover;
 }
-#replacementImage{
-    /* display: none; */
-}
+
 @media only screen and (max-width: 600px) {
     #nav_buttons {
         width: 40vw;
