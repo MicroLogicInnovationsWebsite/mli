@@ -27,7 +27,7 @@ html {
 .navigation-button {
     /* background-color: transparents; */
     background: none;
-    color: rgb(247, 247, 247);
+    color: rgb(8, 25, 110);
     font-size: 1.4vw;
     display: flex;
     flex-direction: row;
@@ -38,7 +38,7 @@ html {
 }
 
 .navigation-button:hover {
-    color: #0d84d4;
+    color: #000102;
     transform: scale(1.05);
 }
 
