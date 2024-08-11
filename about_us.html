@@ -9,16 +9,124 @@
     <link rel="stylesheet" href="about_us.css">
     <script src="script.js"></script>
     <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav_bar_container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        #index_button button,
+        #nav_buttons button {
+            background-color: #444;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #index_button button:hover,
+        #nav_buttons button:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .main_header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .parent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .left_section {
+            flex: 1;
+        }
+
+        .left_section h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .left_section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .right_section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .parent {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .left_section h1 {
+                font-size: 1.5em;
+            }
+
+            .left_section p {
+                font-size: 1em;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .left_section h1 {
+                font-size: 1.2em;
+            }
+
+            .left_section p {
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
 
 <body>
     <!-- Navigation bar -->
-    <div class="nav_bar_container" style="display: flex; flex-direction: row;">
+    <div class="nav_bar_container">
         <div id="index_button">
-            <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO
-                LOGIC
-                INNOVATIONS</button>
+            <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO LOGIC INNOVATIONS</button>
         </div>
         <div id="nav_buttons">
             <button id="goToServices" class="navigation-button" onclick="goToServices()">Our Services</button>
@@ -27,7 +135,6 @@
             <button id="goToCareers" class="navigation-button" onclick="goToCareers()">Careers</button>
         </div>
     </div>
-
 
     <main>
         <header class="main_header">
@@ -39,24 +146,22 @@
                 <p>
                     At Micro Logic Innovations, we are dedicated to revolutionizing embedded systems through relentless
                     innovation and cutting-edge technology. Our mission is to set new standards for efficiency,
-                    reliability,
-                    and performance, empowering industries with seamlessly integrated solutions. Committed to creating a
-                    future where embedded systems blend into everyday life, our passionate team of engineers anticipates
-                    evolving client needs. We foster a culture of continuous learning, collaboration, and
-                    forward-thinking
-                    to shape the future of technology. Sustainability and social responsibility drive us to optimize
-                    processes for a greener world. Join us on our unwavering journey to redefine possibilities in
-                    embedded
-                    systems, where our innovations empower success and contribute to the next era of advancements.</p>
+                    reliability, and performance, empowering industries with seamlessly integrated solutions. Committed
+                    to creating a future where embedded systems blend into everyday life, our passionate team of
+                    engineers anticipates evolving client needs. We foster a culture of continuous learning,
+                    collaboration, and forward-thinking to shape the future of technology. Sustainability and social
+                    responsibility drive us to optimize processes for a greener world. Join us on our unwavering journey
+                    to redefine possibilities in embedded systems, where our innovations empower success and contribute
+                    to the next era of advancements.</p>
             </div>
             <div class="right_section">
-                <img class="image" src="/images/image_bgc_about_us.jpg" alt="">
+                <img class="image" src="/images/image_bgc_about_us.jpg" alt="Our Mission Image">
             </div>
         </div>
     </main>
 
     <footer class="footer">
-        <p style="text-align: center;">&copy; 2024 Micro Logic Innovations. All rights reserved.</p>
+        <p>&copy; 2024 Micro Logic Innovations. All rights reserved.</p>
     </footer>
 </body>
 
