@@ -8,27 +8,110 @@
     <link rel="stylesheet" href="res_page_nav_css.css">
     <link rel="stylesheet" href="contact_us.css">
     <script src="script.js"></script>
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav_bar_container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        #index_button button,
+        #nav_buttons button {
+            background-color: #444;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #index_button button:hover,
+        #nav_buttons button:hover {
+            background-color: #555;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .nav_bar_container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #nav_buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 0.9em;
+            }
+        }
+    </style>
 </head>
 
 <body>
-        <!-- Navigation bar -->
-        <div class="nav_bar_container" style="display: flex; flex-direction: row;">
-            <div id="index_button">
-                <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO
-                    LOGIC
-                    INNOVATIONS</button>
-            </div>
-            <div id="nav_buttons">
-                <button id="goToServices" class="navigation-button" onclick="goToServices()">Our Services</button>
-                <button id="goToAboutUs" class="navigation-button" onclick="goToAboutUs()">About Us</button>
-                <button id="goToContactUs" class="navigation-button" onclick="goToContactUs()">Contact Us</button>
-                <button id="goToCareers" class="navigation-button" onclick="goToCareers()">Careers</button>
-            </div>
+    <!-- Navigation bar -->
+    <div class="nav_bar_container">
+        <div id="index_button">
+            <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO LOGIC INNOVATIONS</button>
         </div>
+        <div id="nav_buttons">
+            <button id="goToServices" class="navigation-button" onclick="goToServices()">Our Services</button>
+            <button id="goToAboutUs" class="navigation-button" onclick="goToAboutUs()">About Us</button>
+            <button id="goToContactUs" class="navigation-button" onclick="goToContactUs()">Contact Us</button>
+            <button id="goToCareers" class="navigation-button" onclick="goToCareers()">Careers</button>
+        </div>
+    </div>
 
-    <h1 id="het_in_touch_h1">Get In Touch With Us</h1>
+    <h1 id="get_in_touch_h1">Get In Touch With Us</h1>
     <h2 class="contact_info">Email: info@micrologicinnovations.tech</h2>
-    <h2 class="contact_info">Whatsapp: Anmol Wadhera +91-7015825557</h2>
+    <h2 class="contact_info">WhatsApp: Anmol Wadhera +91-7015825557</h2>
 </body>
 
 </html>
