@@ -8,23 +8,124 @@
     <link rel="stylesheet" href="career.css">
     <script src="script.js"></script>
     <title>Careers</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav_bar_container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        #index_button button,
+        #nav_buttons button {
+            background-color: #444;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #index_button button:hover,
+        #nav_buttons button:hover {
+            background-color: #555;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        #heading_hoin_us {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .careers-info {
+            text-align: center;
+        }
+
+        .careers-info-p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            width: 50%;
+            margin: 20px auto;
+            border: 0;
+            height: 1px;
+            background: #333;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            #heading_hoin_us {
+                font-size: 1.5em;
+            }
+
+            .careers-info-p {
+                font-size: 1em;
+            }
+
+            hr {
+                width: 70%;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            #heading_hoin_us {
+                font-size: 1.2em;
+            }
+
+            .careers-info-p {
+                font-size: 0.9em;
+            }
+
+            hr {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-        <!-- Navigation bar -->
-        <div class="nav_bar_container" style="display: flex; flex-direction: row;">
-            <div id="index_button">
-                <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO
-                    LOGIC
-                    INNOVATIONS</button>
-            </div>
-            <div id="nav_buttons">
-                <button id="goToServices" class="navigation-button" onclick="goToServices()">Our Services</button>
-                <button id="goToAboutUs" class="navigation-button" onclick="goToAboutUs()">About Us</button>
-                <button id="goToContactUs" class="navigation-button" onclick="goToContactUs()">Contact Us</button>
-                <button id="goToCareers" class="navigation-button" onclick="goToCareers()">Careers</button>
-            </div>
+    <!-- Navigation bar -->
+    <div class="nav_bar_container">
+        <div id="index_button">
+            <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO LOGIC INNOVATIONS</button>
         </div>
+        <div id="nav_buttons">
+            <button id="goToServices" class="navigation-button" onclick="goToServices()">Our Services</button>
+            <button id="goToAboutUs" class="navigation-button" onclick="goToAboutUs()">About Us</button>
+            <button id="goToContactUs" class="navigation-button" onclick="goToContactUs()">Contact Us</button>
+            <button id="goToCareers" class="navigation-button" onclick="goToCareers()">Careers</button>
+        </div>
+    </div>
+
     <section>
         <h2 id="heading_hoin_us">Join Our Team</h2>
         <hr>
