@@ -7,28 +7,88 @@
     <title>MICRO LOGIC INNOVATIONS</title>
     <link rel="stylesheet" href="index_style.css">
     <script src="script.js"></script>
-    <script>
-        // JavaScript for mobile redirection
-         if (window.innerWidth <= 600) {
-             window.location.href = 'index_mobile.html';
-         }
-    </script>
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #MICRO_LOGIC_INNOVATIONS_VID {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Navigation bar */
+        .nav_bar_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+            color: white;
+        }
+
+        .nav_bar_container button {
+            background-color: #444;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .nav_bar_container button:hover {
+            background-color: #555;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .nav_bar_container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav_bar_container button {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 5px;
+            }
+
+            #MICRO_LOGIC_INNOVATIONS_VID {
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #MICRO_LOGIC_INNOVATIONS_VID {
+                width: 100%;
+                height: auto;
+            }
+
+            .nav_bar_container {
+                padding: 5px;
+            }
+
+            .nav_bar_container button {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div>
         <video id="MICRO_LOGIC_INNOVATIONS_VID" autoplay muted loop>
             <source src="/images/vdo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <div>
-           // <img id="replacementImage" src="/images/phone_c_over.png" alt="">
-        </div>
+
         <!-- Navigation bar -->
-        <div class="nav_bar_container" style="display: flex; flex-direction: row;">
+        <div class="nav_bar_container">
             <div id="index_button">
-                <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO
-                    LOGIC
-                    INNOVATIONS</button>
+                <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO LOGIC INNOVATIONS</button>
             </div>
             <div id="nav_buttons">
                 <button id="goToServices" class="navigation-button" onclick="goToServices()">Our Services</button>
