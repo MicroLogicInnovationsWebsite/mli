@@ -15,6 +15,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .nav_bar_container {
@@ -52,6 +55,29 @@
 
         h2 {
             font-size: 1.2em;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
 
         /* Mobile styles */
@@ -110,8 +136,14 @@
     </div>
 
     <h1 id="get_in_touch_h1">Get In Touch With Us</h1>
-    <h2 class="contact_info">Email: info@micrologicinnovations.tech</h2>
-    <h2 class="contact_info">WhatsApp: Anmol Wadhera +91-7015825557</h2>
+    <h2 class="contact_info">Email: <a href="mailto:info@micrologicinnovations.tech">info@micrologicinnovations.tech</a></h2>
+    <h2 class="contact_info">WhatsApp: Anmol Wadhera <a href="https://wa.me/917015825557" target="_blank">+91-7015825557</a></h2>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Micro Logic Innovations. All rights reserved.</p>
+        <p>Follow us on <a href="https://twitter.com/micrologicinnovations" target="_blank">Twitter</a> | <a href="https://www.linkedin.com/company/micrologicinnovations" target="_blank">LinkedIn</a></p>
+    </div>
 </body>
 
 </html>
