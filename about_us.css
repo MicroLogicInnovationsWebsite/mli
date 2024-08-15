@@ -43,13 +43,7 @@ img {
     height: 60vh;
 }
 
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    flex-shrink: 0; /* Ensures footer doesn't shrink and stays at the bottom */
-}
+
 
 /* for mobile view */
 @media only screen and (max-width: 600px) {
@@ -91,12 +85,6 @@ img {
         height: 60vh;
     }
 
-   .footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    flex-shrink: 0; /* Ensures footer doesn't shrink and stays at the bottom */
-}
+   
 
 }
