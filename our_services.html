@@ -15,6 +15,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .nav_bar_container {
@@ -45,6 +48,7 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+            flex: 1;
         }
 
         h1 {
@@ -99,6 +103,26 @@
             font-size: 1.2em;
             line-height: 1.6;
             padding: 0 20px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
 
         /* Mobile styles */
@@ -226,6 +250,12 @@
                 your website's capabilities.</p>
         </div>
     </div>
+
+    <!-- Fixed Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Micro Logic Innovations. All rights reserved.</p>
+        <p>For inquiries, email us at <a href="mailto:info@micrologicinnovations.tech">info@micrologicinnovations.tech</a></p>
+    </footer>
 </body>
 
 </html>
