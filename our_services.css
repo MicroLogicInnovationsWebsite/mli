@@ -16,13 +16,17 @@
 .data_monit_left {
     width: 50vw;
     height: 40vh;
-    background-color: #c75252;
+    background: url('path/to/your/image.jpg') no-repeat center center;
+    background-size: cover; /* This ensures the image covers the entire background */
 }
 
+
 .img_data_monitoring {
-    width: 50vw;
-    height: 58vh;
+    width: 100%; /* Use 100% to fill the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the entire container */
 }
+
 
 .Parameter_Control {
     display: flex;
@@ -88,11 +92,13 @@
         align-items: center;
     }
 
-    .data_monit_left {
-        width: 100vw;
-        height: 80vh;
-        background-color: #c75252;
-    }
+   .data_monit_left {
+    width: 50vw;
+    height: 40vh;
+    background: url('path/to/your/image.jpg') no-repeat center center;
+    background-size: cover; /* This ensures the image covers the entire background */
+}
+
 
     .img_data_monitoring {
         width: 100vw;
