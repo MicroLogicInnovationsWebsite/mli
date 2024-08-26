@@ -146,6 +146,12 @@ footer p {
         overflow-y: auto; /* Enable scrolling if menu items exceed viewport height */
     }
 
+
+    header {
+       
+        max-height: 40vw;
+    }
+
     nav ul.show {
         display: flex; /* Show menu when toggled */
     }
