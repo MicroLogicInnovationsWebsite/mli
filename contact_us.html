@@ -1,149 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="res_page_nav_css.css">
-    <link rel="stylesheet" href="contact_us.css">
-    <script src="script.js"></script>
+    <title>Contact Us - Micro Logic Innovations</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Base styles */
         body {
-            font-family: Arial, sans-serif;
+            background: url('bgd.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            font-family: 'Manrope', Arial, sans-serif;
         }
-
-        .nav_bar_container {
+        header {
+            background: rgba(255, 255, 255, 1); /* Dark background for the header */
+            color: #000000; /* Text color for header */
+            padding: 10px 20px;
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
+            max-height: 3.5vw;
+            box-sizing: border-box; /* Ensure padding is included in the element’s total width and height */
         }
-
-        #index_button button,
-        #nav_buttons button {
-            background-color: #444;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            cursor: pointer;
+        .logo img {
+            max-width: 7vw /* Adjust logo size */
         }
-
-        #index_button button:hover,
-        #nav_buttons button:hover {
-            background-color: #555;
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
         }
-
-        h1, h2 {
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #000000; /* Link color in the header */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-section {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+            border-radius: 10px;
+            border: 2px solid #ccc; /* Border around the section */
             text-align: center;
-            margin: 20px 0;
         }
-
-        h1 {
-            font-size: 2em;
+        .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-
-        h2 {
+        .contact-info {
             font-size: 1.2em;
+            line-height: 1.6;
         }
-
-        /* Footer styles */
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: auto;
-            width: 100%;
-        }
-
-        .footer p {
+        .contact-info p {
             margin: 10px 0;
         }
-
-        .footer a {
-            color: #0066cc;
-            text-decoration: none;
+        footer {
+            background: rgba(0, 0, 0, 0.8); /* Dark background for the footer */
+            color: #fff; /* Text color for footer */
+            padding: 10px;
+            text-align: center;
         }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
         /* Mobile styles */
         @media (max-width: 768px) {
-            .nav_bar_container {
-                flex-direction: column;
-                text-align: center;
+            nav ul {
+                display: none; /* Hide default menu */
+                flex-direction: column; /* Stack menu items vertically */
+                position: fixed;
+                top: 0;
+                right: 0;
+                background-color: rgba(51, 51, 51, 0.9); /* Dark semi-transparent background */
+                width: 250px;
+                height: 100%;
+                padding: 20px;
+                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3); /* Shadow for better separation */
+                z-index: 1000; /* Ensure menu is above other elements */
+                overflow-y: auto; /* Enable scrolling if menu items exceed viewport height */
             }
-
-            #nav_buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
+    
+            nav ul.show {
+                display: flex; /* Show menu when toggled */
             }
-
-            h1 {
-                font-size: 1.5em;
+    
+            nav ul li {
+                margin: 10px 0; /* Vertical spacing between menu items */
+                text-align: center; /* Center align text */
             }
-
-            h2 {
-                font-size: 1em;
+    
+            nav ul li a {
+                color: #fff; /* White text color */
+                text-decoration: none; /* Remove underline */
+                font-size: 1.5em; /* Larger font size for readability */
+                padding: 10px; /* Add padding around links */
+                display: block; /* Make links block-level to fill width */
+                border-radius: 5px; /* Rounded corners */
+                transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
             }
-
-            button {
-                width: 100%;
-                padding: 15px;
+    
+            nav ul li a:hover {
+                background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+                color: #fff; /* Ensure text color stays white */
             }
-        }
-
-        /* Extra small screens */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.2em;
+    
+            .menu-toggle {
+                display: block; /* Show menu toggle button */
+                cursor: pointer;
+                font-size: 1.8em;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                z-index: 1001; /* Ensure toggle button is above other content */
             }
-
-            h2 {
-                font-size: 0.9em;
+    
+            .menu-toggle span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: #000000; /* White lines for toggle button */
+                margin: 5px 0;
+                transition: background 0.3s; /* Smooth transition for background color */
             }
         }
     </style>
+    
 </head>
-
 <body>
-    <!-- Navigation bar -->
-    <div class="nav_bar_container">
-        <div id="index_button">
-            <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO LOGIC INNOVATIONS</button>
-        </div>
-        <div id="nav_buttons">
-            <button id="goToServices" class="navigation-button" onclick="goToServices()">Our Services</button>
-            <button id="goToAboutUs" class="navigation-button" onclick="goToAboutUs()">About Us</button>
-            <button id="goToContactUs" class="navigation-button" onclick="goToContactUs()">Contact Us</button>
-            <button id="goToCareers" class="navigation-button" onclick="goToCareers()">Careers :)</button>
-        </div>
-    </div>
+    <header>
+        <div class="logo">
+            <a href="index.html">
 
-    <h1 id="get_in_touch_h1">Get In Touch With Us</h1>
-    <h2 class="contact_info">Email: <a href="mailto:info@micrologicinnovations.tech">info@micrologicinnovations.tech</a></h2>
-    <h2 class="contact_info">WhatsApp: Anmol Wadhera <a href="https://wa.me/917015825557" target="_blank">+91-7015825557</a></h2>
+            <img src="MLI LOGO.png" alt="MLI Logo">
+        </a>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>&copy; 2024 Micro Logic Innovations. All rights reserved.</p>
-        <p>Follow us on <a href="https://twitter.com/micrologicinnovations" target="_blank">Twitter</a> | <a href="https://www.linkedin.com/company/micrologicinnovations" target="_blank">LinkedIn</a></p>
-    </div>
+            <div class="company-name">
+                <h2>Micro Logic Innovations</h2>
+            </div>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Get In Touch With Us</h2>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:info@micrologicinnovations.tech">info@micrologicinnovations.tech</a></p>
+                <p>WhatsApp: Anmol Wadhera +91-7015825557</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Micro Logic Innovations. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
