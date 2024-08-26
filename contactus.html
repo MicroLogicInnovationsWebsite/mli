@@ -55,9 +55,11 @@
             margin-bottom: 20px;
         }
         .contact-info {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
+    font-size: 1em; /* Adjust font size for mobile */
+    line-height: 1.4; /* Adjust line height for better spacing */
+    overflow-wrap: break-word; /* Allow long words to break and wrap */
+    word-break: break-word; /* Ensure long words break and wrap */
+}
         .contact-info p {
             margin: 10px 0;
         }
@@ -83,6 +85,10 @@
                 z-index: 1000; /* Ensure menu is above other elements */
                 overflow-y: auto; /* Enable scrolling if menu items exceed viewport height */
             }
+            header {
+       
+       max-height: 40vw;
+   }
     
             nav ul.show {
                 display: flex; /* Show menu when toggled */
