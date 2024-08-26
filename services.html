@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Micro Logic Innovations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+    background-image: url('pic.png');
+    background-size: cover; /* Adjusts the size of the background image to cover the entire page */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background image fixed when scrolling */
+}
+
+.service-section {
+    max-width: 80vw;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Adds a semi-transparent background for readability */
+    border-radius: 10px;
+    border: 2px solid #ccc; /* Adds a border around the section */
+}
+
+.service-section h2 {
+    font-size: 2.5em; /* Larger font size for the heading */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service {
+    display: flex;
+    align-items: stretch; /* Stretch the items to have equal height */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc; /* Optional: adds a border between services */
+    padding-bottom: 20px; /* Optional: adds padding below each service */
+}
+
+.service img {
+    width: 40%;
+    max-width: 40%; /* Ensures the image doesn’t exceed 40% of the container width */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 10px;
+}
+
+.service-content {
+    width: 60%; /* Allocates the remaining 60% to the text */
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Centers content vertically */
+    margin-left: 20px; /* Adds margin to the left of the text content */
+}
+
+.service-content h3 {
+    font-size: 1.8em; /* Font size for subheadings */
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.service-content p {
+    font-size: 1.2em; /* Font size for text */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column; /* Stack image above text on mobile */
+        align-items: center;
+    }
+    .service img {
+        margin: 0 0 20px 0;
+        width: 100%;
+        max-width: 100%;
+        height: auto; /* Ensures the image height adjusts according to width */
+    }
+    .service-content {
+        width: 100%;
+        text-align: center;
+        margin-left: 0; /* Remove left margin on mobile */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+
+            <img src="MLI LOGO.png" alt="MLI Logo">   
+        </a>
+
+            <div class="company-name">
+
+                <h2>Micro Logic Innovations</h2>
+
+            </div>
+
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="service-section">
+            <!-- <h2>Our Services</h2> -->
+
+            <div class="service">
+                <img src="service3.jpg" alt="Data Monitoring">
+                <div class="service-content">
+                    <h3>Data Monitoring</h3>
+                    <p>Revolutionize your industrial operations with our state-of-the-art Data Monitoring Service. Designed to cater to diverse industries, our product excels in monitoring a wide array of critical data points. From machinery performance and production metrics to environmental factors, our service ensures comprehensive data surveillance. Through secure transmission protocols, the gathered data seamlessly integrates into our web-based platform, providing real-time insights accessible from anywhere. Experience the power of intuitive web views that transform complex industrial data into visually compelling representations.</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <img src="service2.jpg" alt="Parameter Control">
+                <div class="service-content">
+                    <h3>Parameter Control</h3>
+                    <p>Introducing our Parameter Control feature, a cutting-edge solution that puts the power of remote control in your hands. With this innovative technology, every input and output section can be effortlessly managed over the internet. Seamlessly control valves, motors, and various devices remotely, allowing for unprecedented flexibility in your operations. Whether it's adjusting conditions based on real-time data or simply operating devices online, our Parameter Control ensures unparalleled convenience.</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <img src="service1.png" alt="Customized Embedded Solution">
+                <div class="service-content">
+                    <h3>Customized Embedded Solution</h3>
+                    <p>Our customized embedded system is designed to meet the unique needs of your platform, providing efficient and reliable integration of hardware and software components. Experience a smoother and more responsive user experience with our cutting-edge embedded solution, offering a personalized approach to elevate your website's capabilities.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Micro Logic Innovations. All Rights Reserved.</p>
+        <p>For inquiries, email us at <a href="mailto:info@micrologicinnovations.tech">info@micrologicinnovations.tech</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
