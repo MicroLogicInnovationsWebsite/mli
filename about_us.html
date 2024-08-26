@@ -1,188 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Micro Logic Innovations</title>
-    <link rel="stylesheet" href="res_page_nav_css.css">
-    <link rel="stylesheet" href="about_us.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Base styles */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            background-image: url('pic2.jpg');
+            background-size: cover; /* Adjusts the size of the background image to cover the entire page */
+            background-position: center; /* Centers the background image */
+            background-attachment: fixed; /* Keeps the background image fixed when scrolling */
+        }
+        .about-section {
+    max-width: 80vw; /* Increased width for side-by-side alignment */
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Adds a semi-transparent background for readability */
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Wraps content on smaller screens */
+    gap: 20px; /* Adds space between image and text */
+}
+
+.about-section img {
+    width: 100%; /* Full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Limit the width to avoid excessive stretching */
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+    border-radius: 10px;
+}
+
+.about-content {
+    width: 100%; /* Full width for mobile and smaller screens */
+    max-width: calc(100% - 420px); /* Adjust width of text area */
+    flex-grow: 1; /* Allows the text to take up remaining space */
+}
+
+        .about-content h2 {
+            font-size: 2em; /* Adjust this value as needed */
+        }
+        .about-content p {
+            font-size: 1.2em; /* Adjust this value as needed */
         }
 
-        .nav_bar_container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-        }
 
-        #index_button button,
-        #nav_buttons button {
-            background-color: #444;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        #index_button button:hover,
-        #nav_buttons button:hover {
-            background-color: #555;
-        }
-
-        main {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-            flex: 1;
-        }
-
-        .main_header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .parent {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .left_section {
-            flex: 1;
-        }
-
-        .left_section h1 {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-
-        .left_section p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-
-        .right_section {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* Footer styles */
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .footer a {
-            color: #00bcd4;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Mobile styles */
         @media (max-width: 768px) {
-            .parent {
-                flex-direction: column;
-                text-align: center;
-            }
+    .about-section {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        align-items: center; /* Center-align items */
+    }
 
-            .left_section h1 {
-                font-size: 1.5em;
-            }
+    .about-section img {
+        max-width: 100%; /* Full width on smaller screens */
+    }
 
-            .left_section p {
-                font-size: 1em;
-            }
-        }
+    .about-content {
+        width: 100%; /* Full width on smaller screens */
+        max-width: none; /* Remove max-width limit */
+    }
+}
 
-        /* Extra small screens */
-        @media (max-width: 480px) {
-            .left_section h1 {
-                font-size: 1.2em;
-            }
-
-            .left_section p {
-                font-size: 0.9em;
-            }
-        }
     </style>
 </head>
-
 <body>
-    <!-- Navigation bar -->
-    <div class="nav_bar_container">
-        <div id="index_button">
-            <button id="goToIndex" class="navigation-button" onclick="goToIndex()">MICRO LOGIC INNOVATIONS</button>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+
+            <img src="MLI LOGO.png" alt="MLI Logo">
+        </a>
+
+            <div class="company-name">
+                <h2>Micro Logic Innovations</h2>
+            </div>
         </div>
-        <div id="nav_buttons">
-            <button id="goToServices" class="navigation-button" onclick="goToServices()">Our Services</button>
-            <button id="goToAboutUs" class="navigation-button" onclick="goToAboutUs()">About Us</button>
-            <button id="goToContactUs" class="navigation-button" onclick="goToContactUs()">Contact Us</button>
-            <button id="goToCareers" class="navigation-button" onclick="goToCareers()">Careers :)</button>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <header class="main_header">
-            <h1>About Micro Logic Innovations</h1>
-        </header>
-        <div class="parent">
-            <div class="left_section">
-                <h1>Our Mission</h1>
-                <p>
-                    At Micro Logic Innovations, we are dedicated to revolutionizing embedded systems through relentless
-                    innovation and cutting-edge technology. Our mission is to set new standards for efficiency,
-                    reliability, and performance, empowering industries with seamlessly integrated solutions. Committed
-                    to creating a future where embedded systems blend into everyday life, our passionate team of
-                    engineers anticipates evolving client needs. We foster a culture of continuous learning,
-                    collaboration, and forward-thinking to shape the future of technology. Sustainability and social
-                    responsibility drive us to optimize processes for a greener world. Join us on our unwavering journey
-                    to redefine possibilities in embedded systems, where our innovations empower success and contribute
-                    to the next era of advancements.
-                </p>
+        <section class="about-section">
+            <img src="as.jpg" alt="About Us">
+            <div class="about-content">
+                <h2>About Micro Logic Innovations</h2>
+               
+                <p>At Micro Logic Innovations, we are dedicated to revolutionizing embedded systems through relentless innovation and cutting-edge technology. Our mission is to set new standards for efficiency, reliability, and performance, empowering industries with seamlessly integrated solutions. Committed to creating a future where embedded systems blend into everyday life, our passionate team of engineers anticipates evolving client needs. We foster a culture of continuous learning, collaboration, and forward-thinking to shape the future of technology. Sustainability and social responsibility drive us to optimize processes for a greener world. Join us on our unwavering journey to redefine possibilities in embedded systems, where our innovations empower success and contribute to the next era of advancements.</p>
             </div>
-            <div class="right_section">
-                <img class="image" src="/images/image_bgc_about_us.jpg" alt="Our Mission Image">
-            </div>
-        </div>
+        </section>
     </main>
 
-    <!-- Fixed Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Micro Logic Innovations. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2024 Micro Logic Innovations. All Rights Reserved.</p>
         <p>For inquiries, email us at <a href="mailto:info@micrologicinnovations.tech">info@micrologicinnovations.tech</a></p>
     </footer>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
