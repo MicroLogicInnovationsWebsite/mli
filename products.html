@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Micro Logic Innovations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+    background: url('product.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', Arial, sans-serif;
+}
+header {
+    background: rgba(255, 255, 255, 1); /* Light background for the header */
+    color: #000; /* Text color for header */
+}
+.logo img {
+    max-width: 100px; /* Adjust logo size */
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #000000; /* Link color in the header */
+    text-decoration: none;
+    font-weight: bold;
+}
+.product-container {
+    display: flex;
+    align-items: flex-start; /* Aligns the image to the top */
+    justify-content: space-between;
+    max-width: 80vw;
+    margin: 0px;
+    padding: 20px; /* Added padding around the container */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    flex-direction: row-reverse;
+}
+
+.product-images {
+    display: flex;
+    flex-direction: column; /* Stacks images vertically */
+    width: 60%; /* Adjust width as needed */
+    padding-right: 20px; /* Add padding to the right side */
+}
+
+.product-images img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px; /* Adds space between images */
+    border-radius: 10px;
+    padding: 10px; /* Add padding inside the image container */
+}
+
+.product-details {
+    width: 40%; /* Allocate 40% space to the text */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.product-details h3 {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 2em; /* Increased font size for headings */
+}
+
+.product-details h4 {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 1.5em; /* Increased font size for subheadings */
+}
+
+.product-details p, .product-details ul li {
+    color: #fff; /* Set font color to white */
+}
+
+.product-details ul {
+    padding-left: 20px;
+    text-align: left; /* Align list items to the left */
+}
+
+.product-details ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8); /* Dark background for the footer */
+    color: #fff; /* Text color for footer */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column; /* Stack image above text on mobile */
+        text-align: center;
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .product-images {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px; /* Space between image and text */
+        order: 1; /* Order 2 so images appear after text in mobile view */
+        padding: 0; /* Remove padding for mobile */
+    }
+
+    .product-details {
+        width: 100%; /* Full width on mobile */
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center; /* Center-align text on mobile */
+        order: 2; /* Order 2 so images appear after text in mobile view */
+    }
+
+    .product-images img {
+        margin: 0; /* Remove margins on mobile */
+        max-width: 100%; /* Ensure images fit within the container */
+        padding: 0; /* Remove padding for mobile */
+    }
+
+    nav ul li a {
+        color: #ffffff; /* Link color in the header */
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+
+            <img src="MLI LOGO.png" alt="MLI Logo">
+        </a>
+
+            <div class="company-name">
+                <h2>Micro Logic Innovations</h2>
+            </div>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products">
+            <!-- <h2 style="text-align: center; font-size: 2.5em; margin-top: 20px;">Our Products</h2> -->
+
+            <div class="product-container">
+                <div class="product-details">
+                    <h3>Plant Monitoring System (PMS)</h3>
+                    <p>Our Plant Monitoring System (PMS) is an innovative solution designed to optimize and automate the monitoring of manufacturing plants. Powered by ESP-based devices, PMS collects real-time data from machines across your facility, ensuring seamless data transmission to a centralized server. This data is then displayed on an intuitive dashboard, providing key insights into machine performance, operational status, and maintenance needs.</p>
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Real-time Data Collection: PMS monitors critical parameters like temperature, humidity, vibration, and more, sending this data instantly to the server.</li>
+                        <li>Centralized Dashboard: All machine data is accessible from a single, user-friendly dashboard, allowing plant managers to make informed decisions quickly.</li>
+                        <li>Scalable & Customizable: PMS can be tailored to meet the specific needs of any manufacturing plant, regardless of size.</li>
+                        <li>Predictive Maintenance: By analyzing trends and patterns, PMS helps in predicting potential machine failures, reducing downtime.</li>
+                        <li>Remote Monitoring: Access the dashboard from anywhere, enabling continuous monitoring and control even when off-site.</li>
+                        <li>Easy Integration: PMS integrates seamlessly with existing plant infrastructure, minimizing setup time and disruptions.</li>
+                    </ul>
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li>Enhanced Efficiency: Real-time monitoring and data-driven insights lead to better resource allocation and improved plant efficiency.</li>
+                        <li>Reduced Downtime: Early detection of issues allows for timely intervention, reducing the risk of unexpected machine failures.</li>
+                        <li>Cost Savings: By optimizing machine performance and reducing downtime, PMS contributes to significant cost savings over time.</li>
+                    </ul>
+                </div>
+                <div class="product-images">
+                    <img src="pms.jpg" alt="Plant Monitoring System" class="main-image">
+                    <img src="pms2.jpg" alt="Plant Monitoring System Feature" class="additional-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Micro Logic Innovations. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
