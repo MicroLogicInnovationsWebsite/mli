@@ -30,6 +30,11 @@
 
 @media (max-width: 768px) {
 
+        /* Apply white font color to all text elements */
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
+            color: rgb(192, 192, 192);
+      
+    }
     .info_section .col-md-3 {
         text-align: center;
     }
